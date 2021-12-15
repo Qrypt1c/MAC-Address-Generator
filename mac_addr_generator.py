@@ -16,12 +16,15 @@ def generator():
         print(input)
     elif input_value == 2:
         part = ""
-        for x in range(5):
+        for x in range(3):
             part = part + str(random.randint(0,9)) + str(random.randint(0,9)) + ":"
         part = part + str(random.randint(0,9)) + str(random.randint(0,9))
         print(part)
     else:
-        #Placeholder code for only character generation
-        print(input)
+        part = ""
+        for x in range(3):
+            part = part + random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase) + ":"
+        part = part + random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase)
+        print(part)
 
 generator()
