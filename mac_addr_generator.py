@@ -16,7 +16,7 @@ def generator():
     if input_value == 1:
         address = ""
         int_or_char_list = [str(random.randint(0,9)), random.choice(string.ascii_uppercase)]
-        for x in range(3):
+        for x in range(5):
             address = address + random.choice(int_or_char_list) + random.choice(int_or_char_list) + ":"
         address = address + random.choice(int_or_char_list) + random.choice(int_or_char_list)
         print(address)
@@ -24,7 +24,7 @@ def generator():
     # Only integer MAC address generation
     elif input_value == 2:
         address = ""
-        for x in range(3):
+        for x in range(5):
             address = address + str(random.randint(0,9)) + str(random.randint(0,9)) + ":"
         address = address + str(random.randint(0,9)) + str(random.randint(0,9))
         print(address)
@@ -32,7 +32,7 @@ def generator():
     #Only character MAC address generation
     else:
         address = ""
-        for x in range(3):
+        for x in range(5):
             address = address + random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase) + ":"
         address = address + random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase)
         print(address)
