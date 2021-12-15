@@ -11,15 +11,25 @@ def generator():
                 continue
         except:
             print("Choose '1', '2', or '3'")
+    
+    # Default MAC address Generation
     if input_value == 1:
-        #Placeholder code for default generation
-        print(input)
+        address = ""
+        int_or_char_list = [str(random.randint(0,9)), random.choice(string.ascii_uppercase)]
+        for x in range(3):
+            address = address + random.choice(int_or_char_list) + random.choice(int_or_char_list) + ":"
+        address = address + random.choice(int_or_char_list) + random.choice(int_or_char_list)
+        print(address)
+    
+    # Only integer MAC address generation
     elif input_value == 2:
         address = ""
         for x in range(3):
             address = address + str(random.randint(0,9)) + str(random.randint(0,9)) + ":"
         address = address + str(random.randint(0,9)) + str(random.randint(0,9))
         print(address)
+    
+    #Only character MAC address generation
     else:
         address = ""
         for x in range(3):
