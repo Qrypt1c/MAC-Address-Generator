@@ -15,16 +15,16 @@ def generator():
         #Placeholder code for default generation
         print(input)
     elif input_value == 2:
-        part = ""
+        address = ""
         for x in range(3):
-            part = part + str(random.randint(0,9)) + str(random.randint(0,9)) + ":"
-        part = part + str(random.randint(0,9)) + str(random.randint(0,9))
-        print(part)
+            address = address + str(random.randint(0,9)) + str(random.randint(0,9)) + ":"
+        address = address + str(random.randint(0,9)) + str(random.randint(0,9))
+        print(address)
     else:
-        part = ""
+        address = ""
         for x in range(3):
-            part = part + random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase) + ":"
-        part = part + random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase)
-        print(part)
+            address = address + random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase) + ":"
+        address = address + random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase)
+        print(address)
 
 generator()
